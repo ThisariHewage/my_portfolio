@@ -47,16 +47,16 @@
 }
 
 .card-type {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--text-dim);
+  color: var(--text-muted);
   font-weight: 700;
 }
 
 .card-period {
-  font-size: 0.8rem;
-  color: var(--text-dim);
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 .card-title {
@@ -68,8 +68,8 @@
 }
 
 .card-institution {
-  font-size: 0.95rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: #cccccc;
   margin-bottom: 2rem;
 }
 
@@ -81,9 +81,9 @@
 }
 
 .card-desc {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--text-muted);
+  color: #cccccc;
   margin-bottom: 2rem;
   flex-grow: 1;
 }

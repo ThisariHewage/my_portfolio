@@ -23,7 +23,7 @@ const Education = () => {
       type: 'Certificate',
       title: 'Diploma in C Programming',
       institution: 'Alison',
-      period: '2023',
+      period: '2024',
       description: 'Gained knowledge of C programming, including variables, loops, functions, and basic problem-solving.',
       meta: 'Grade: Distinction'
     },
