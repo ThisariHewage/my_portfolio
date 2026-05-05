@@ -28,19 +28,38 @@
   width: 50px;
   height: 50px;
   background: none;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--text-dim);
   color: var(--text-main);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 4px;
 }
 
+.slider-btn svg {
+  transition: transform 0.3s ease;
+}
+
 .slider-btn:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: var(--text-muted);
+  background-color: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-dark);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.slider-btn:hover svg {
+  color: var(--bg-dark);
+}
+
+.slider-btn:first-child:hover svg {
+  transform: translateX(-5px);
+}
+
+.slider-btn:last-child:hover svg {
+  transform: translateX(5px);
 }
 
 .featured-project {
