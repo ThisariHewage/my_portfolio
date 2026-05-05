@@ -4,6 +4,7 @@ import blogImg1 from '../assets/blog-cybersecurity.jpg';
 import blogImg2 from '../assets/blog-mysql.webp';
 import blogImg3 from '../assets/blog-licensing.jpg';
 import blogImg4 from '../assets/blog-devops.avif';
+import blogImg5 from '../assets/blog-os.jpg';
 
 const Blogs = () => {
   const blogPosts = [
@@ -47,6 +48,16 @@ const Blogs = () => {
       tech: ['DevOps', 'CI/CD', 'Cloud'],
       link: 'https://medium.com/@thisaridewmini428/understanding-devops-a-comprehensive-guide-5dff8ec53864'
     },
+
+    {
+      image: blogImg5,
+      date: 'Jun 25, 2025',
+      readTime: '3 min read',
+      title: 'Building ThisariOS: My First 16-Bit Operating System From Scratch',
+      excerpt: 'A deep dive into low-level programming, exploring bootloaders, the BIOS, assembly language, and what it takes to build a minimal 16-bit OS from the ground up.',
+      tech: ['Assembly', 'C', 'Operating Systems'],
+      link: 'https://medium.com/@thisaridewmini428/building-thisarios-my-first-16-bit-operating-system-from-scratch-fd1938c2014a'
+    }
 
   ];
 
