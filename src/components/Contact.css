@@ -78,10 +78,18 @@
 }
 
 /* Form Styling */
+.contact-form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  height: 100%;
+  margin-top: 10rem;
 }
 
 .form-group {
@@ -121,6 +129,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
   padding: 1.2rem 2.5rem;
   background-color: var(--text-main);
   color: var(--bg-dark);
