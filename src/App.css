@@ -188,6 +188,7 @@
   top: 0;
   right: 0;
   z-index: 1;
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-image {
@@ -215,10 +216,54 @@
 }
 
 /* About Section */
-.about-section {
-  padding: 10rem 0;
+.about-section.app {
+  min-height: 100vh;
   background-color: var(--bg-dark);
 }
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05); }
+  50% { box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1); }
+  100% { box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05); }
+}
+
+/* ===== Scroll Reveal Utilities ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
 
 .section-header {
   margin-bottom: 4rem;
@@ -302,17 +347,19 @@
 
 .stat-card {
   padding: 1.5rem 1.2rem;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .stat-card:hover {
-  border-color: var(--text-main);
+  transform: translateY(-8px) scale(1.05);
   background-color: rgba(255, 255, 255, 0.05);
-  transform: translateY(-8px);
+  border-color: var(--text-muted);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .stat-num {
