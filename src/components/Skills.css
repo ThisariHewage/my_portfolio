@@ -73,13 +73,19 @@
   transition: all 0.3s ease;
 }
 
+.skill-badge:hover {
+  transform: translateY(-10px);
+}
+
 .skill-badge:hover .skill-icon {
   opacity: 1;
-  transform: translateY(-5px);
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px currentColor);
 }
 
 .skill-badge:hover span:not(.skill-icon) {
   color: var(--text-main);
+  font-weight: 700;
 }
 
 @media (max-width: 1024px) {
