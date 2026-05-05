@@ -76,7 +76,7 @@
 .blog-excerpt {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #cccccc;
+  color: var(--text-muted);
   margin-bottom: 2rem;
   flex-grow: 1;
 }
@@ -124,4 +124,27 @@
   .blogs-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== Light Mode Overrides ===== */
+[data-theme='light'] .blog-card {
+  background-color: transparent;
+}
+
+[data-theme='light'] .blog-image-container {
+  background-color: #dddddd;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+[data-theme='light'] .blog-tech-tag {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-color: #cccccc;
+}
+
+[data-theme='light'] .blog-image-meta {
+  color: #eeeeee;
+}
+
+[data-theme='light'] .read-more-link {
+  color: var(--text-main);
 }

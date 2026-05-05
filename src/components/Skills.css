@@ -97,3 +97,21 @@
     padding: 2.5rem 2rem;
   }
 }
+
+/* ===== Light Mode Overrides ===== */
+[data-theme='light'] .skill-category-card {
+  border-top-color: #bbbbbb;
+}
+
+[data-theme='light'] .category-title::after {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .skill-icon {
+  color: var(--text-main);
+  opacity: 0.85;
+}
+
+[data-theme='light'] .skill-badge:hover .skill-icon {
+  opacity: 1;
+}

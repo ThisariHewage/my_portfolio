@@ -85,3 +85,17 @@
     order: 3;
   }
 }
+
+/* ===== Light Mode Overrides ===== */
+[data-theme='light'] .footer {
+  background-color: #e8e8e8;
+  border-top-color: #cccccc;
+}
+
+[data-theme='light'] .footer-social-icon {
+  color: var(--text-muted);
+}
+
+[data-theme='light'] .footer-social-icon:hover {
+  color: var(--text-main);
+}

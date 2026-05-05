@@ -348,3 +348,49 @@
     min-width: 200px;
   }
 }
+
+/* ===== Light Mode Overrides ===== */
+[data-theme='light'] .navbar {
+  background-color: rgba(240, 240, 240, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='light'] .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+[data-theme='light'] .action-btn {
+  color: var(--text-main);
+  border-color: #aaaaaa;
+}
+
+[data-theme='light'] .action-btn:hover {
+  border-color: var(--text-main);
+  background-color: rgba(0,0,0,0.05);
+}
+
+[data-theme='light'] .icon-only {
+  background-color: var(--text-main);
+  color: #f0f0f0;
+}
+
+[data-theme='light'] .stat-card {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #cccccc;
+}
+
+[data-theme='light'] .stat-card:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: var(--text-muted);
+}
+
+[data-theme='light'] .title-line {
+  background-color: var(--text-main);
+}
+
+[data-theme='light'] .divider {
+  background-color: var(--text-main);
+}

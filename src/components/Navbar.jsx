@@ -1,9 +1,21 @@
-import { useState } from 'react';
-import { Menu, X, Moon } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
+import { useTheme } from '../ThemeContext';
+import profileImg from '../assets/thisari-portrait.png';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -18,6 +30,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container nav-content">
         <a href="#home" className="nav-brand">
+          <div className={`nav-avatar ${scrolled ? 'nav-avatar--visible' : ''}`}>
+            <img src={profileImg} alt="Thisari Uresha" />
+          </div>
           Thisari Uresha
         </a>
 
@@ -29,8 +44,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className="theme-toggle">
-          <Moon size={20} />
+        <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
         </button>
 
         <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>

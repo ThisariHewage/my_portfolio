@@ -101,7 +101,7 @@
 .project-desc-featured {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #cccccc;
+  color: var(--text-muted);
   margin-bottom: 2.5rem;
   max-width: 90%;
 }
@@ -171,4 +171,36 @@
   .project-title-featured {
     font-size: 2.2rem;
   }
+}
+
+/* ===== Light Mode Overrides ===== */
+[data-theme='light'] .project-visual {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #cccccc;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+[data-theme='light'] .featured-project:hover .project-visual {
+  border-color: var(--text-muted);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.14);
+}
+
+[data-theme='light'] .tech-badge-featured {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-color: #cccccc;
+}
+
+[data-theme='light'] .github-btn {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: #cccccc;
+}
+
+[data-theme='light'] .github-btn:hover {
+  background-color: var(--text-main);
+  color: #f0f0f0;
+}
+
+[data-theme='light'] .slider-btn {
+  border-color: #bbbbbb;
+  color: var(--text-main);
 }
