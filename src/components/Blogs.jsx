@@ -2,9 +2,19 @@ import { motion } from 'framer-motion';
 import './Blogs.css';
 import blogImg1 from '../assets/blog-springboot.png';
 import blogImg2 from '../assets/blog-mvc.png';
+import blogImg3 from '../assets/blog-cybersecurity.jpg';
 
 const Blogs = () => {
   const blogPosts = [
+    {
+      image: blogImg3,
+      date: 'Jul 16, 2024',
+      readTime: '5 min read',
+      title: 'CIA Triad in Cyber Security',
+      excerpt: 'An overview of the CIA Triad (Confidentiality, Integrity, Availability) and its importance in establishing a robust cyber security posture.',
+      tech: ['Cyber Security', 'CIA Triad', 'InfoSec'],
+      link: 'https://medium.com/@thisaridewmini428/cia-triad-in-cyber-security-9b174bbea515'
+    },
     {
       image: blogImg1,
       date: 'Apr 1, 2025',
@@ -34,7 +44,7 @@ const Blogs = () => {
   return (
     <section id="blogs" className="blogs-section">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +57,7 @@ const Blogs = () => {
 
         <div className="blogs-grid">
           {blogPosts.map((post, index) => (
-            <motion.article 
+            <motion.article
               key={index}
               className="blog-card"
               initial={{ opacity: 0, y: 20 }}
@@ -75,7 +85,7 @@ const Blogs = () => {
                     <span key={i} className="blog-tech-tag">{tag}</span>
                   ))}
                 </div>
-                <a href="#" className="read-more-link">
+                <a href={post.link || '#'} target={post.link ? "_blank" : undefined} rel={post.link ? "noopener noreferrer" : undefined} className="read-more-link">
                   READ ARTICLE <span>↗</span>
                 </a>
               </div>
