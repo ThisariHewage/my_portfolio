@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import './Blogs.css';
 import blogImg1 from '../assets/blog-cybersecurity.jpg';
-import blogImg2 from '../assets/blog-mysql.jpg';
+import blogImg2 from '../assets/blog-mysql.webp';
+import blogImg3 from '../assets/blog-licensing.jpg';
 
 const Blogs = () => {
   const blogPosts = [
@@ -27,28 +28,13 @@ const Blogs = () => {
     },
 
     {
-      image: blogImg1,
-      date: 'Apr 1, 2025',
-      readTime: '4 min read',
-      title: 'Getting Started with Spring Boot',
-      excerpt: 'A quick-start walkthrough for spinning up Spring Boot services, structuring REST APIs, and shipping your first backend feature.',
-      tech: ['Java', 'Spring Boot', 'Backend']
-    },
-    {
-      image: blogImg2,
-      date: 'Dec 3, 2024',
-      readTime: '4 min read',
-      title: 'Understanding the MVC Architecture in Web Development',
-      excerpt: 'A plain-language breakdown of the MVC pattern, why it still matters, and how to keep controllers lean while views stay clean.',
-      tech: ['Full-Stack', 'Architecture', 'Trends']
-    },
-    {
-      image: blogImg1,
-      date: 'Jun 21, 2024',
-      readTime: '4 min read',
-      title: 'Exploring the World of Software Licensing: An In-Depth Overview',
-      excerpt: 'Key licensing models, what they allow, and how to choose the right one to keep your project safe and shareable.',
-      tech: ['Software', 'Security', 'Licensing']
+      image: blogImg3,
+      date: 'May 1, 2025',
+      readTime: '3 min read',
+      title: 'Understanding Software Licensing: A Guide to Today\'s Most Common Licenses',
+      excerpt: 'A comprehensive guide to modern software licensing models, what they allow, and how to choose the right license to protect your intellectual property.',
+      tech: ['Software', 'Licensing', 'Open Source'],
+      link: 'https://medium.com/@thisaridewmini428/understanding-software-licensing-a-guide-to-todays-most-common-licenses-078966bfabf5'
     }
   ];
 
