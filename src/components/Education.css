@@ -1,120 +1,119 @@
 .education-section {
-  padding: 10rem 0;
+  padding: 8rem 0;
   background-color: var(--bg-dark);
 }
 
-.education-timeline {
-  position: relative;
-  max-width: 900px;
-  margin-top: 4rem;
-  padding-left: 2rem;
+.section-header {
+  margin-bottom: 6rem;
 }
 
-.education-timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background-color: var(--text-dim);
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -2.35rem;
-  top: 0.5rem;
-  width: 14px;
-  height: 14px;
+.title-line {
+  margin: 1rem 0 0;
+  width: 50px;
+  height: 3px;
   background-color: var(--text-main);
-  border-radius: 50%;
-  border: 4px solid var(--bg-dark);
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 5rem;
+.edu-grid-simple {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 8rem;
+  align-items: start;
 }
 
-.timeline-item:last-child {
-  margin-bottom: 0;
+.edu-item-simple {
+  margin-bottom: 4rem;
 }
 
-.timeline-content {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  padding: 4rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.timeline-content:hover {
-  border-color: var(--text-main);
-  transform: translateX(10px);
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.edu-achievements {
-  list-style: none;
+.edu-item-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
+.edu-degree-simple {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+}
 
-.edu-period {
+.edu-institution-simple {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.edu-meta-group {
+  text-align: right;
+}
+
+.edu-date-simple {
   display: block;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+}
+
+.edu-cgpa-simple {
   font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 2px;
   color: var(--text-main);
-  margin-bottom: 1.5rem;
 }
 
-.edu-degree {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: var(--text-main);
-  margin-bottom: 0.8rem;
-  line-height: 1.2;
-}
-
-.edu-institution {
-  font-size: 1.25rem;
-  font-weight: 600;
+.edu-desc-simple {
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--text-muted);
+  max-width: 600px;
+}
+
+.cert-col {
+  padding-left: 2rem;
+  border-left: 1px solid var(--border);
+}
+
+.subsection-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 3rem;
+}
+
+.cert-item-simple {
   margin-bottom: 2.5rem;
 }
 
-.edu-description {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: var(--text-muted);
-  margin-bottom: 3rem;
-  max-width: 800px;
-}
-
-.edu-achievements li {
+.cert-name-simple {
   font-size: 1rem;
+  font-weight: 600;
   color: var(--text-main);
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 0.6rem 1.2rem;
-  border-radius: 100px;
-  border: 1px solid var(--border);
-  font-weight: 500;
+  margin-bottom: 0.3rem;
 }
 
+.cert-issuer-simple {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
 
-@media (max-width: 768px) {
-  .education-timeline {
-    padding-left: 1.5rem;
+.cert-desc-simple {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .edu-grid-simple {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
   
-  .timeline-content {
-    padding: 2rem;
-  }
-  
-  .edu-degree {
-    font-size: 1.4rem;
+  .cert-col {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-top: 4rem;
   }
 }
