@@ -1,7 +1,33 @@
 import { motion } from 'framer-motion';
+import { useTheme } from '../ThemeContext';
 import './Skills.css';
 
 const Skills = () => {
+  const { isDark } = useTheme();
+
+  const skillColors = {
+    'HTML5': '#E34F26',
+    'CSS3': '#1572B6',
+    'JavaScript': '#F7DF1E',
+    'React.js': '#61DAFB',
+    'Vite': '#646CFF',
+    'Tailwind CSS': '#06B6D4',
+    'C Programming': '#A8B9CC',
+    'Java': '#007396',
+    'Python': '#3776AB',
+    'Node.js': '#339933',
+    'Express': '#888888',
+    'MySQL': '#4479A1',
+    'MongoDB': '#47A248',
+    'Spring Boot': '#6DB33F',
+    'Git': '#F05032',
+    'GitHub': '#181717',
+    'VS Code': '#007ACC',
+    'Postman': '#FF6C37',
+    'Agile/Scrum': '#00A8E8',
+    'Figma': '#F24E1E',
+  };
+
   const skillIcons = {
     'HTML5': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 18-8-4-8 4 8-18z"></path></svg>,
     'CSS3': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>,
@@ -73,7 +99,14 @@ const Skills = () => {
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    {skillIcons[skill] && <span className="skill-icon">{skillIcons[skill]}</span>}
+                    {skillIcons[skill] && (
+                      <span 
+                        className="skill-icon"
+                        style={{ color: !isDark ? skillColors[skill] : 'inherit' }}
+                      >
+                        {skillIcons[skill]}
+                      </span>
+                    )}
                     {skill}
                   </motion.span>
                 ))}
@@ -85,6 +118,5 @@ const Skills = () => {
     </section>
   );
 };
-
 
 export default Skills;
