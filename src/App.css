@@ -1,3 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-brand {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  flex: 2;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 40px;
+  margin-left: auto;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-main);
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .nav-content {
+    gap: 1.5rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+    color: var(--text-main);
+    cursor: pointer;
+  }
+}
+
+/* App Sections */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -48,13 +135,12 @@
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: var(--text-muted);
   max-width: 500px;
   margin-bottom: 3rem;
   font-weight: 500;
 }
-
 
 .hero-actions {
   display: flex;
@@ -88,7 +174,6 @@
   background-color: var(--text-main);
   color: var(--bg-dark);
 }
-
 
 .with-icon {
   gap: 0.8rem;
@@ -129,3 +214,137 @@
   }
 }
 
+/* About Section */
+.about-section {
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.title-line {
+  width: 60px;
+  height: 2px;
+  background-color: var(--text-main);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.lead-text {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.about-bio p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.focus-areas {
+  margin-top: 3rem;
+}
+
+.focus-areas h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.focus-areas ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+}
+
+.focus-areas li {
+  font-size: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.focus-areas li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-muted);
+  border-radius: 50%;
+}
+
+.about-stats-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stat-card {
+  padding: 3.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.stat-card:hover {
+  border-color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-8px);
+}
+
+.stat-num {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .about-stats-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    flex: 1;
+    min-width: 200px;
+  }
+}

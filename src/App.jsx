@@ -40,6 +40,54 @@ function App() {
             </div>
           </div>
         </section>
+        <section id="about" className="about-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">ABOUT ME</h2>
+              <div className="title-line"></div>
+            </div>
+            <div className="about-grid">
+              <div className="about-main">
+                <p className="lead-text">
+                  I am a driven <strong>Software Engineering Undergraduate</strong> with a focus on building high-performance, accessible, and beautiful digital experiences.
+                </p>
+                <div className="about-bio">
+                  <p>
+                    My approach to software development combines technical rigor with a strong eye for design. I don't just write code; I craft solutions that solve real-world problems while maintaining clean, efficient, and scalable architectures.
+                  </p>
+                  <p>
+                    Currently, I'm deep-diving into modern full-stack ecosystems, exploring the intersection of robust backend logic and fluid frontend interactions.
+                  </p>
+                </div>
+
+                <div className="focus-areas">
+                  <h3>What I do:</h3>
+                  <ul>
+                    <li>Full Stack Web Development</li>
+                    <li>UI/UX Design Systems</li>
+                    <li>Passionate about building user-friendly software</li>
+                    <li>Strong in Problem Solving & Agile Practices</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="about-stats-sidebar">
+                <div className="stat-card">
+                  <span className="stat-num">01+</span>
+                  <span className="stat-label">Years Learning</span>
+                </div>
+                <div className="stat-card">
+                  <span className="stat-num">02+</span>
+                  <span className="stat-label">Projects Built</span>
+                </div>
+                <div className="stat-card">
+                  <span className="stat-num">05+</span>
+                  <span className="stat-label">Tech Stacks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
