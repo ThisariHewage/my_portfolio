@@ -44,7 +44,7 @@ const Skills = () => {
     'MongoDB': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3c-1.1 0-2.22.18-3.28.52C7.12 4.05 6 5.3 6 6.75c0 1.2.7 2.1 1.63 2.7.27.18.52.4.74.65.22.25.4.52.53.81.13.3.2.62.2.94v8.15c0 .55.45 1 1 1s1-.45 1-1V12c0-.32.07-.64.2-.94.13-.29.31-.56.53-.81.22-.25.47-.47.74-.65.93-.6 1.63-1.5 1.63-2.7 0-1.45-1.12-2.7-2.72-3.23C14.22 3.18 13.1 3 12 3z"></path></svg>,
     'Spring Boot': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>,
     'Git': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 19V5"></path><path d="m19 12-7 7-7-7"></path></svg>,
-    'GitHub': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>,
+    'GitHub': <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>,
     'VS Code': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>,
     'Postman': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>,
     'Agile/Scrum': <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"></path></svg>,
@@ -80,15 +80,27 @@ const Skills = () => {
           <div className="title-line"></div>
         </motion.div>
 
-        <div className="skills-grid">
+        <motion.div 
+          className="skills-grid"
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1
+            }
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {skillGroups.map((group, groupIndex) => (
             <motion.div 
               key={groupIndex} 
               className="skill-category-card"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 }
+              }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
               <h3 className="category-title">{group.category}</h3>
               <div className="skills-list">
@@ -96,8 +108,16 @@ const Skills = () => {
                   <motion.span 
                     key={skillIndex} 
                     className="skill-badge"
-                    whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-                    transition={{ type: 'spring', stiffness: 300 }}
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.8, y: 20 },
+                      show: { opacity: 1, scale: 1, y: 0 }
+                    }}
+                    whileHover={{ 
+                      scale: 1.15, 
+                      y: -10,
+                      transition: { type: 'spring', stiffness: 400, damping: 17 }
+                    }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     {skillIcons[skill] && (
                       <span 
@@ -113,7 +133,7 @@ const Skills = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

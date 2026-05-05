@@ -35,8 +35,8 @@
 }
 
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -48,6 +48,7 @@
   padding: 1.2rem;
   transition: all 0.3s ease;
   cursor: default;
+  text-align: center; /* Center the text lines */
 }
 
 .skill-icon {
@@ -71,21 +72,24 @@
   text-transform: capitalize;
   letter-spacing: 1px;
   transition: all 0.3s ease;
+  display: inline-block; /* Allow it to be centered as a block */
+  width: 100%;
+  text-align: center;
 }
 
 .skill-badge:hover {
-  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: scale(1.05);
 }
 
 .skill-badge:hover .skill-icon {
   opacity: 1;
-  transform: scale(1.15);
-  filter: drop-shadow(0 0 8px currentColor);
+  transform: translateY(-2px);
+  filter: brightness(1.2);
 }
 
 .skill-badge:hover span:not(.skill-icon) {
   color: var(--text-main);
-  font-weight: 700;
 }
 
 @media (max-width: 1024px) {

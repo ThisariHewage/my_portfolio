@@ -152,13 +152,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.5rem;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
+  padding: 1.2rem 2.5rem;
+  border: 1.5px solid var(--text-dim);
+  border-radius: 0;
+  color: var(--text-main);
   text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   transition: all 0.3s ease;
 }
 
@@ -168,11 +170,13 @@
 }
 
 .icon-only {
-  width: 45px;
-  height: 45px;
+  width: 58px;
+  height: 58px;
   padding: 0;
   background-color: var(--text-main);
   color: var(--bg-dark);
+  border: 1.5px solid var(--text-main);
+  border-radius: 0;
 }
 
 .with-icon {
@@ -412,7 +416,7 @@
 
 [data-theme='light'] .action-btn {
   color: var(--text-main);
-  border-color: #aaaaaa;
+  border: 1.5px solid #888888;
 }
 
 [data-theme='light'] .action-btn:hover {
@@ -421,6 +425,12 @@
 }
 
 [data-theme='light'] .icon-only {
+  background-color: var(--text-main);
+  color: #f0f0f0;
+  border: 1.5px solid var(--text-main);
+}
+
+[data-theme='light'] .icon-only:hover {
   background-color: var(--text-main);
   color: #f0f0f0;
 }
