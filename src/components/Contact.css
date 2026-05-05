@@ -18,9 +18,9 @@
 }
 
 .contact-text {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--text-muted);
+  color: #cccccc;
   margin-bottom: 4rem;
 }
 
@@ -65,10 +65,10 @@
 }
 
 .contact-card-label {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--text-dim);
+  color: var(--text-muted);
 }
 
 .contact-card-value {
@@ -99,10 +99,10 @@
 }
 
 .form-group label {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--text-dim);
+  color: var(--text-muted);
   font-weight: 700;
 }
 
@@ -122,6 +122,15 @@
   outline: none;
   border-color: var(--text-muted);
   background-color: rgba(255, 255, 255, 0.04);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-style: normal;
+  font-weight: 300;
+  color: var(--text-muted);
+  opacity: 0.5;
+  letter-spacing: 0.5px;
 }
 
 .submit-btn {
