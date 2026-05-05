@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container nav-content">
         <a href="#home" className="nav-brand">
-          Thisari uresha
+          Thisari Uresha
         </a>
 
         <ul className="nav-links">

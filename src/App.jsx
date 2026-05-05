@@ -4,6 +4,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blogs from './components/Blogs';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 // Icons removed to fix white screen crash
 
 import heroPortrait from './assets/thisari-portrait.png';
@@ -99,6 +100,7 @@ function App() {
         <Blogs />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
