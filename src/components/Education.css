@@ -24,9 +24,9 @@
 
 .edu-card {
   background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--text-dim);
   padding: 2.5rem;
-  border-radius: 8px;
+  border-radius: 0px;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -74,9 +74,9 @@
 }
 
 .card-divider {
-  width: 30px;
+  width: 40px;
   height: 2px;
-  background-color: var(--border);
+  background-color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
@@ -119,7 +119,7 @@
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .edu-card {
   background-color: rgba(0, 0, 0, 0.04);
-  border-color: #cccccc;
+  border: 1.5px solid #aaaaaa;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
