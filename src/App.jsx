@@ -2,6 +2,8 @@ import Navbar from './components/Navbar';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Blogs from './components/Blogs';
+import Contact from './components/Contact';
 // Icons removed to fix white screen crash
 
 import heroPortrait from './assets/thisari-portrait.png';
@@ -94,6 +96,8 @@ function App() {
         <Education />
         <Skills />
         <Projects />
+        <Blogs />
+        <Contact />
       </main>
     </div>
   );
