@@ -8,7 +8,7 @@ const Education = () => {
       title: 'BSc in Software Engineering',
       institution: 'University of Kelaniya',
       period: '2023 - Present',
-      description: 'Specializing in Net centric Web Application Development, Data Science and Health Informatic Engineering Domains.',
+      description: 'Specializing in Net centric Web Application Development, Data Science and Engineering Application, Health Informatic Engineering Domains.',
       meta: 'CGPA: 3.50/4.0'
     },
     {
