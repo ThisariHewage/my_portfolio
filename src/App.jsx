@@ -79,6 +79,17 @@ function App() {
               <img src={heroPortrait} alt="Thisari Uresha" className="hero-image" />
             </motion.div>
           </div>
+
+          <motion.div 
+            className="scroll-indicator"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2, duration: 1 }}
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <span className="scroll-text">Scroll down</span>
+            <div className="scroll-icon">↓</div>
+          </motion.div>
         </section>
 
         <section id="about" className="about-section">

@@ -266,6 +266,67 @@
   }
 }
 
+@keyframes scrollBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 4rem;
+  right: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-main);
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.scroll-text {
+  writing-mode: vertical-rl;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 800;
+}
+
+.scroll-icon {
+  font-size: 1.2rem;
+  animation: scrollBounce 2s infinite ease-in-out;
+}
+
+@keyframes scrollBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+[data-theme='light'] .scroll-indicator {
+  color: #000000;
+}
+
 /* ===== Scroll Reveal Utilities ===== */
 .reveal {
   opacity: 0;
