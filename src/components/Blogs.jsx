@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import './Blogs.css';
-import blogImg1 from '../assets/blog-springboot.png';
-import blogImg2 from '../assets/blog-mvc.png';
-import blogImg3 from '../assets/blog-cybersecurity.jpg';
+import blogImg1 from '../assets/blog-cybersecurity.jpg';
+import blogImg2 from '../assets/blog-mysql.jpg';
 
 const Blogs = () => {
   const blogPosts = [
+
     {
-      image: blogImg3,
+      image: blogImg1,
       date: 'Jul 16, 2024',
       readTime: '5 min read',
       title: 'CIA Triad in Cyber Security',
@@ -15,6 +15,17 @@ const Blogs = () => {
       tech: ['Cyber Security', 'CIA Triad', 'InfoSec'],
       link: 'https://medium.com/@thisaridewmini428/cia-triad-in-cyber-security-9b174bbea515'
     },
+
+    {
+      image: blogImg2,
+      date: 'Jan 27, 2025',
+      readTime: '3 min read',
+      title: 'Stored Procedures in MySQL',
+      excerpt: 'Learn how to write and optimize Stored Procedures in MySQL to encapsulate logic, enhance security, and improve database performance.',
+      tech: ['MySQL', 'Database', 'SQL'],
+      link: 'https://medium.com/@thisaridewmini428/stored-procedures-in-mysql-b53bd2dffa8b'
+    },
+
     {
       image: blogImg1,
       date: 'Apr 1, 2025',
