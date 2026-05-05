@@ -70,18 +70,28 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              className="contact-form" 
+              action="https://formsubmit.co/thisaridewmini428@gmail.com" 
+              method="POST"
+            >
+              {/* FormSubmit Configuration */}
+              <input type="hidden" name="_subject" value="New Portfolio Message!" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{ display: 'none' }} />
+              
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" placeholder="John Doe" required />
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="john@example.com" required />
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" rows="5" placeholder="How can I help you?" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
               </div>
               <button type="submit" className="submit-btn">
                 Send Message
