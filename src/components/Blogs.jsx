@@ -3,6 +3,7 @@ import './Blogs.css';
 import blogImg1 from '../assets/blog-cybersecurity.jpg';
 import blogImg2 from '../assets/blog-mysql.webp';
 import blogImg3 from '../assets/blog-licensing.jpg';
+import blogImg4 from '../assets/blog-devops.avif';
 
 const Blogs = () => {
   const blogPosts = [
@@ -35,7 +36,18 @@ const Blogs = () => {
       excerpt: 'A comprehensive guide to modern software licensing models, what they allow, and how to choose the right license to protect your intellectual property.',
       tech: ['Software', 'Licensing', 'Open Source'],
       link: 'https://medium.com/@thisaridewmini428/understanding-software-licensing-a-guide-to-todays-most-common-licenses-078966bfabf5'
-    }
+    },
+
+    {
+      image: blogImg4,
+      date: 'May 3, 2025',
+      readTime: '4 min read',
+      title: 'Understanding DevOps: A Comprehensive Guide',
+      excerpt: 'A deep dive into DevOps culture, practices, and tools. Learn how integrating development and operations can streamline workflows and accelerate delivery.',
+      tech: ['DevOps', 'CI/CD', 'Cloud'],
+      link: 'https://medium.com/@thisaridewmini428/understanding-devops-a-comprehensive-guide-5dff8ec53864'
+    },
+
   ];
 
   return (
