@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className={`nav-avatar ${scrolled ? 'nav-avatar--visible' : ''}`}>
             <img src={profileImg} alt="Thisari Uresha" />
           </div>
-          Thisari Uresha
+          Thisari Hewage
         </a>
 
         <ul className="nav-links">
