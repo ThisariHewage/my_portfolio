@@ -1,27 +1,27 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Projects.css';
-import projectImg from '../assets/project-placeholder.png';
+import projectImg from '../assets/project-placeholder.jpeg';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const projectList = [
     {
-      title: 'MRV System',
-      subtitle: 'Environmental Data Management • 2025',
-      description: 'A government-grade Measurement, Reporting, and Verification system for tracking national GHG emissions. Features multi-sector data collection (Energy, Waste, Agriculture), IPCC-compliant calculations, and multi-language support (English, Sinhala, Tamil).',
-      tech: ['Laravel 11', 'Vue.js 3', 'Inertia.js', 'MySQL', 'Tailwind CSS', 'PrimeVue', 'ApexCharts', 'Leaflet', 'Docker'],
-      github: '#',
-      live: '#'
+      title: 'Care4Pets',
+      subtitle: 'Pet Store E-commerce Platform',
+      description: 'A full-stack pet store e-commerce platform providing a complete online shopping experience. Features product browsing, user authentication, shopping cart management, and order processing.',
+      tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+      github: 'https://github.com/ThisariHewage/Care4Pets',
+      live: 'https://github.com/ThisariHewage/Care4Pets'
     },
     {
       title: 'Book Fair Stall Reservation',
-      subtitle: 'Management System • 2024',
+      subtitle: 'Management System • 2026',
       description: 'A comprehensive system for managing book stall bookings with real-time availability and user dashboard. Designed to streamline the reservation process for large-scale events.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Cloudinary'],
-      github: '#',
-      live: '#'
+      tech: ['React', 'Spring Boot', 'MySQL', 'Tailwind CSS'],
+      github: 'https://github.com/ThisariHewage/bookfair-stall-reservation-system',
+      live: 'https://github.com/ThisariHewage/bookfair-stall-reservation-system'
     }
   ];
 
@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="section-header"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const Projects = () => {
 
         <div className="projects-slider-container">
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={currentIndex}
               className="featured-project"
               initial={{ opacity: 0, x: 20 }}

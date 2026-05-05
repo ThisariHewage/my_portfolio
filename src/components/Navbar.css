@@ -4,7 +4,10 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
   transition: all 0.3s ease;
 }
 
@@ -16,25 +19,29 @@
 }
 
 .nav-brand {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 900;
   color: var(--text-main);
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   flex: 1;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 3.5rem;
   flex: 2;
   justify-content: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  font-weight: 500;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   transition: color 0.3s ease;
 }
 
