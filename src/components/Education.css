@@ -1,5 +1,5 @@
 .education-section {
-  padding: 8rem 0;
+  padding: 10rem 0;
   background-color: var(--bg-dark);
 }
 
@@ -14,106 +14,104 @@
   background-color: var(--text-main);
 }
 
-.edu-grid-simple {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 8rem;
-  align-items: start;
+.edu-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0;
 }
 
-.edu-item-simple {
-  margin-bottom: 4rem;
+.edu-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
 }
 
-.edu-item-header {
+.edu-card:hover {
+  border-color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: translateY(-12px) translateX(8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.edu-degree-simple {
-  font-size: 1.25rem;
+.card-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-dim);
   font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 0.3rem;
 }
 
-.edu-institution-simple {
+.card-period {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card-institution {
   font-size: 0.95rem;
   color: var(--text-muted);
+  margin-bottom: 2rem;
 }
 
-.edu-meta-group {
-  text-align: right;
+.card-divider {
+  width: 30px;
+  height: 2px;
+  background-color: var(--border);
+  margin-bottom: 2rem;
 }
 
-.edu-date-simple {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  margin-bottom: 0.3rem;
+.card-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
-.edu-cgpa-simple {
+.card-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-meta {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-main);
 }
 
-.edu-desc-simple {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 600px;
-}
-
-.cert-col {
-  padding-left: 2rem;
-  border-left: 1px solid var(--border);
-}
-
-.subsection-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 3rem;
-}
-
-.cert-item-simple {
-  margin-bottom: 2.5rem;
-}
-
-.cert-name-simple {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-main);
-  margin-bottom: 0.3rem;
-}
-
-.cert-issuer-simple {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 0.8rem;
-}
-
-.cert-desc-simple {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 1024px) {
-  .edu-grid-simple {
+@media (max-width: 1200px) {
+  .edu-cards-grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-cards-grid {
+    grid-template-columns: 1fr;
   }
   
-  .cert-col {
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid var(--border);
-    padding-top: 4rem;
+  .edu-card {
+    padding: 2rem;
   }
 }
