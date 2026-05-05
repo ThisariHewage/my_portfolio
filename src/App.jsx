@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Education from './components/Education';
+import Skills from './components/Skills';
 // Icons removed to fix white screen crash
 
 import heroPortrait from './assets/thisari-portrait.png';
@@ -90,6 +91,7 @@ function App() {
           </div>
         </section>
         <Education />
+        <Skills />
       </main>
     </div>
   );
