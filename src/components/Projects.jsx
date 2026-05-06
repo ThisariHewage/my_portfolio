@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Projects.css';
-import projectImg from '../assets/project-placeholder.jpeg';
+import care4petsImg from '../assets/care4pets.png';
+import bookfairImg from '../assets/bookfair.jpeg';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,7 +14,8 @@ const Projects = () => {
       description: 'A full-stack pet store e-commerce platform providing a complete online shopping experience. Features product browsing, user authentication, shopping cart management, and order processing.',
       tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
       github: 'https://github.com/ThisariHewage/Care4Pets',
-      live: 'https://github.com/ThisariHewage/Care4Pets'
+      live: 'https://github.com/ThisariHewage/Care4Pets',
+      image: care4petsImg
     },
     {
       title: 'Book Fair Stall Reservation',
@@ -21,7 +23,8 @@ const Projects = () => {
       description: 'A comprehensive system for managing book stall bookings with real-time availability and user dashboard. Designed to streamline the reservation process for large-scale events.',
       tech: ['React', 'Spring Boot', 'MySQL', 'Tailwind CSS'],
       github: 'https://github.com/ThisariHewage/bookfair-stall-reservation-system',
-      live: 'https://github.com/ThisariHewage/bookfair-stall-reservation-system'
+      live: 'https://github.com/ThisariHewage/bookfair-stall-reservation-system',
+      image: bookfairImg
     }
   ];
 
@@ -60,7 +63,7 @@ const Projects = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="project-visual">
-                <img src={projectImg} alt={currentProject.title} className="featured-image" />
+                <img src={currentProject.image} alt={currentProject.title} className="featured-image" />
               </div>
               <div className="project-info-featured">
                 <span className="project-subtitle">{currentProject.subtitle}</span>
