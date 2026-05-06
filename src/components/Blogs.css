@@ -14,11 +14,15 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .blog-card:hover {
   transform: translateY(-8px);
+  border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 
@@ -117,6 +121,7 @@
 
 .read-more-link:hover {
   gap: 0.8rem;
+  color: var(--primary);
 }
 
 @media (max-width: 1024px) {
@@ -138,17 +143,30 @@
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .blog-card {
-  background-color: transparent;
+  background-color: #f0f9ff;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .blog-card:hover {
+  background-color: #e0f2fe;
+  border-color: var(--primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='light'] .blog-image-container {
-  background-color: #dddddd;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+  background-color: var(--border);
+  box-shadow: none;
+}
+
+[data-theme='light'] .blog-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 [data-theme='light'] .blog-tech-tag {
-  background-color: rgba(0, 0, 0, 0.06);
-  border-color: #cccccc;
+  background-color: #ffffff;
+  border-color: var(--border);
 }
 
 [data-theme='light'] .blog-image-meta {
@@ -157,4 +175,8 @@
 
 [data-theme='light'] .read-more-link {
   color: var(--text-main);
+}
+
+[data-theme='light'] .read-more-link:hover {
+  color: var(--primary);
 }

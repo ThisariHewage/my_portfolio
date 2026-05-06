@@ -41,13 +41,13 @@ function App() {
       <main>
         <section id="home" className="hero-section">
           <div className="container hero-container">
-            <motion.div 
+            <motion.div
               className="hero-content"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <motion.div variants={itemVariants} className="line-decoration"></motion.div>
+
               <motion.div variants={itemVariants} className="title-group">
                 <h1 className="hero-name">Hi, I'm <span className="highlight">Thisari Uresha Dewmini</span></h1>
               </motion.div>
@@ -70,7 +70,7 @@ function App() {
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="hero-image-container"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -80,7 +80,7 @@ function App() {
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             className="scroll-indicator"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ function App() {
 
         <section id="about" className="about-section">
           <div className="container">
-            <motion.div 
+            <motion.div
               className="section-header"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ function App() {
               <div className="title-line"></div>
             </motion.div>
             <div className="about-grid">
-              <motion.div 
+              <motion.div
                 className="about-main"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -141,7 +141,7 @@ function App() {
                   { num: '02+', label: 'Projects Built' },
                   { num: '05+', label: 'Tech Stacks' }
                 ].map((stat, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     className="stat-card"
                     initial={{ opacity: 0, x: 30 }}

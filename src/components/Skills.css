@@ -85,11 +85,12 @@
 .skill-badge:hover .skill-icon {
   opacity: 1;
   transform: translateY(-2px);
+  color: var(--primary);
   filter: brightness(1.2);
 }
 
 .skill-badge:hover span:not(.skill-icon) {
-  color: var(--text-main);
+  color: var(--primary);
 }
 
 @media (max-width: 1024px) {

@@ -108,12 +108,7 @@
   max-width: 600px;
 }
 
-.line-decoration {
-  width: 40px;
-  height: 2px;
-  background-color: var(--text-dim);
-  margin-bottom: 3rem;
-}
+
 
 .hero-name {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -124,7 +119,7 @@
 }
 
 .highlight {
-  color: var(--text-muted);
+  color: #38bdf8;
 }
 
 .divider {
@@ -165,8 +160,9 @@
 }
 
 .action-btn:hover {
-  border-color: var(--text-main);
-  color: var(--text-main);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-5px);
 }
 
 .icon-only {
@@ -177,6 +173,14 @@
   color: var(--bg-dark);
   border: 1.5px solid var(--text-main);
   border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.icon-only:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+  transform: translateY(-5px);
 }
 
 .with-icon {
@@ -508,10 +512,28 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.btn-github-v2 {
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.3);
+}
+
+.btn-github-v2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
 .stat-card:hover {
   transform: translateY(-10px) scale(1.02);
   background-color: rgba(255, 255, 255, 0.05);
-  border-color: var(--text-main);
+  border-color: var(--primary);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
@@ -567,11 +589,17 @@
 
 [data-theme='light'] .navbar .nav-links a,
 [data-theme='light'] .navbar .nav-brand {
-  color: #000000 !important;
+  color: var(--text-main) !important;
+  opacity: 0.8;
+}
+
+[data-theme='light'] .navbar .nav-links a:hover {
+  color: var(--primary) !important;
+  opacity: 1;
 }
 
 [data-theme='light'] .navbar .nav-links li::before {
-  background-color: #000000 !important;
+  background-color: var(--primary) !important;
 }
 
 [data-theme='light'] .theme-toggle {
@@ -588,10 +616,11 @@
 }
 
 [data-theme='light'] .action-btn:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--primary);
+  border-color: var(--primary);
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(14, 165, 233, 0.15);
 }
 
 [data-theme='light'] .icon-only {
@@ -601,25 +630,62 @@
 }
 
 [data-theme='light'] .icon-only:hover {
+  background-color: #ffffff;
+  color: var(--primary);
+  border-color: var(--primary);
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.2);
+  box-shadow: 0 15px 35px rgba(14, 165, 233, 0.15);
 }
 
 [data-theme='light'] .stat-card {
-  background-color: rgba(0, 0, 0, 0.04);
-  border: 1.5px solid #aaaaaa;
+  background-color: #f0f9ff;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='light'] .stat-card:hover {
-  background-color: rgba(0, 0, 0, 0.08);
-  border-color: var(--text-muted);
+  background-color: #e0f2fe;
+  border-color: var(--primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='light'] .title-line {
   background-color: var(--text-main);
 }
 
-[data-theme='light'] .divider {
-  background-color: var(--text-main);
+[data-theme='light'] .btn-github-v2 {
+  background-color: var(--primary);
+  /* Teal */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+[data-theme='light'] .btn-github-v2:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+}
+
+[data-theme='light'] .btn-outline-v2:nth-child(2) {
+  background-color: #0f172a;
+  /* Deep Navy for primary action */
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+[data-theme='light'] .btn-outline-v2:nth-child(2):hover {
+  background-color: #1e293b;
+  border-color: #1e293b;
+  transform: translateY(-3px);
+}
+
+[data-theme='light'] .btn-outline-v2:nth-child(3) {
+  border-color: var(--border);
+  color: var(--text-main);
+  background-color: transparent;
+}
+
+[data-theme='light'] .btn-outline-v2:nth-child(3):hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: #ffffff;
 }

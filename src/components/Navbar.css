@@ -5,9 +5,10 @@
   width: 100%;
   z-index: 1000;
   padding: 1.5rem 0;
-  background-color: rgba(10, 10, 10, 0.8);
+  background-color: #0f172a;
+  /* Always Deep Navy */
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
 }
 
@@ -19,12 +20,13 @@
 }
 
 .nav-brand {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  /* Always White */
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   flex: 1;
   display: flex;
   align-items: center;
@@ -88,7 +90,7 @@
   top: 50%;
   width: 6px;
   height: 6px;
-  background-color: var(--text-main);
+  background-color: var(--primary);
   border-radius: 50%;
   transform: translateY(-50%) scale(0);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -102,13 +104,14 @@
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-main);
-  font-size: 0.95rem;
+  color: #ffffff;
+  /* Always White */
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .nav-links li:hover a {
@@ -117,7 +120,7 @@
 }
 
 .nav-links a:hover {
-  color: var(--text-main);
+  color: var(--primary);
 }
 
 .theme-toggle {

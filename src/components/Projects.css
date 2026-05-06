@@ -43,15 +43,15 @@
 }
 
 .slider-btn:hover {
-  background-color: var(--text-main);
-  border-color: var(--text-main);
-  color: var(--bg-dark);
+  background-color: rgba(14, 165, 233, 0.05);
+  border-color: var(--primary);
+  color: var(--primary);
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
 }
 
 .slider-btn:hover svg {
-  color: var(--bg-dark);
+  color: var(--primary);
 }
 
 .slider-btn:first-child:hover svg {
@@ -81,7 +81,7 @@
 
 .featured-project:hover .project-visual {
   transform: scale(1.02);
-  border-color: var(--text-muted);
+  border-color: var(--primary);
 }
 
 .featured-image {
@@ -156,10 +156,11 @@
 }
 
 .github-btn:hover {
-  background-color: var(--text-main);
-  color: var(--bg-dark);
+  background-color: rgba(14, 165, 233, 0.05);
+  color: var(--primary);
   transform: scale(1.1);
-  border-color: var(--text-main);
+  border-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
 }
 
 @media (max-width: 1200px) {
@@ -173,15 +174,15 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .project-visual {
     order: 1;
   }
-  
+
   .project-info-featured {
     order: 2;
   }
-  
+
   .project-desc-featured {
     max-width: 100%;
   }
@@ -209,32 +210,35 @@
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .project-visual {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-color: #cccccc;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  background-color: #f0f9ff;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='light'] .featured-project:hover .project-visual {
-  border-color: var(--text-muted);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.14);
+  border-color: var(--primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='light'] .tech-badge-featured {
-  background-color: rgba(0, 0, 0, 0.06);
-  border-color: #cccccc;
+  background-color: #f1f5f9;
+  border-color: var(--border);
 }
 
 [data-theme='light'] .github-btn {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-color: #cccccc;
+  background-color: #f0f9ff;
+  border-color: var(--border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='light'] .github-btn:hover {
-  background-color: var(--text-main);
-  color: #f0f0f0;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
 }
 
 [data-theme='light'] .slider-btn {
-  border-color: #bbbbbb;
+  background-color: #f0f9ff;
+  border-color: var(--border);
   color: var(--text-main);
 }
