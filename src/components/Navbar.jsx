@@ -44,13 +44,26 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
-          {isDark ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
+        <div className="nav-right">
+          <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
 
-        <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-          MENU
+          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+      </div>
+
+      {/* Mobile Menu Drawer */}
+      <div className={`mobile-menu ${isOpen ? 'mobile-menu--open' : ''}`}>
+        <ul className="mobile-nav-links">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a href={link.href} onClick={() => setIsOpen(false)}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
