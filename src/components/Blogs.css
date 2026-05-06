@@ -126,8 +126,13 @@
 }
 
 @media (max-width: 768px) {
+  .blogs-section {
+    padding: 5rem 0;
+  }
+
   .blogs-grid {
     grid-template-columns: 1fr;
+    margin-top: 3rem;
   }
 }
 

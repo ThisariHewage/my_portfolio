@@ -162,7 +162,30 @@
 @media (max-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 6rem;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .contact-grid {
+    margin-top: 3rem;
+    gap: 3rem;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .contact-text {
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    margin-top: 2rem;
   }
 }
 
