@@ -1,5 +1,5 @@
 .skills-section {
-  padding: 10rem 0;
+  padding: 6rem 0;
   background-color: var(--bg-dark);
 }
 
@@ -48,7 +48,8 @@
   padding: 1.2rem;
   transition: all 0.3s ease;
   cursor: default;
-  text-align: center; /* Center the text lines */
+  text-align: center;
+  /* Center the text lines */
 }
 
 .skill-icon {
@@ -72,7 +73,8 @@
   text-transform: capitalize;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  display: inline-block; /* Allow it to be centered as a block */
+  display: inline-block;
+  /* Allow it to be centered as a block */
   width: 100%;
   text-align: center;
 }
@@ -109,7 +111,7 @@
     margin-top: 3rem;
     gap: 2rem;
   }
-  
+
   .skill-category-card {
     padding: 1.5rem 1rem;
   }

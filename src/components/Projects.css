@@ -1,5 +1,5 @@
 .projects-section {
-  padding: 10rem 0;
+  padding: 6rem 0;
   background-color: var(--bg-dark);
 }
 
@@ -145,22 +145,22 @@
 .github-btn {
   width: 60px;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 50%;
+  background-color: var(--text-main);
+  border: 1.5px solid var(--text-main);
+  border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-main);
+  color: var(--bg-dark);
   transition: all 0.3s ease;
 }
 
 .github-btn:hover {
-  background-color: rgba(14, 165, 233, 0.05);
+  background-color: transparent;
   color: var(--primary);
-  transform: scale(1.1);
+  transform: translateY(-5px);
   border-color: var(--primary);
-  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
 }
 
 @media (max-width: 1200px) {
@@ -226,15 +226,16 @@
 }
 
 [data-theme='light'] .github-btn {
-  background-color: #f0f9ff;
-  border-color: var(--border);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='light'] .github-btn:hover {
-  background-color: var(--primary);
+  background-color: transparent;
+  color: var(--primary);
   border-color: var(--primary);
-  color: #ffffff;
 }
 
 [data-theme='light'] .slider-btn {

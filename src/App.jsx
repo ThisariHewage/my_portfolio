@@ -48,11 +48,14 @@ function App() {
               animate="visible"
             >
 
-              <motion.div variants={itemVariants} className="title-group">
-                <h1 className="hero-name">Hi, I'm <span className="highlight">Thisari Uresha Dewmini</span></h1>
+              <motion.div variants={itemVariants} className="title-group-v2">
+                <div className="line-one">
+                  <h1 className="hero-name-top">Hi, I'm</h1>
+                  <div className="title-divider-line"></div>
+                </div>
+                <h1 className="hero-name-bottom">Thisari Uresha Dewmini</h1>
               </motion.div>
-              <motion.div variants={itemVariants} className="divider"></motion.div>
-              <motion.p variants={itemVariants} className="subtitle">
+              <motion.p variants={itemVariants} className="subtitle-v2">
                 Software Engineering Undergraduate | Full Stack Developer
               </motion.p>
 
