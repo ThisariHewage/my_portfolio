@@ -28,6 +28,14 @@ const Contact = () => {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
+    // Basic email validation check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      setStatus('error');
+      setErrorMessage('Please enter a valid email address.');
+      return;
+    }
+
     try {
       const response = await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
         method: "POST",
