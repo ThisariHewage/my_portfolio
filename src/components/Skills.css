@@ -101,25 +101,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .skills-section {
-    padding: 5rem 0;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-    margin-top: 3rem;
-    gap: 2rem;
-  }
-
-  .skill-category-card {
-    padding: 1.5rem 1rem;
-  }
-
-  .skills-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .skill-category-card {

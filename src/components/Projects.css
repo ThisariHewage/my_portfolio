@@ -188,25 +188,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .projects-section {
-    padding: 5rem 0;
-  }
-
-  .projects-slider-container {
-    margin-top: 3rem;
-    gap: 3rem;
-  }
-
-  .project-title-featured {
-    font-size: 2rem;
-  }
-
-  .project-desc-featured {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-}
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .project-visual {

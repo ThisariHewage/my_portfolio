@@ -146,28 +146,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .education-section {
-    padding: 5rem 0;
-  }
-
-  .section-header {
-    margin-bottom: 3rem;
-  }
-
-  .edu-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .edu-card {
-    padding: 1.5rem;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-}
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .edu-card {
