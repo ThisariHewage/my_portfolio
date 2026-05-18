@@ -43,6 +43,7 @@
   border: 2px solid transparent;
   box-sizing: border-box;
   z-index: 1;
+  pointer-events: none;
 }
 
 .edu-card::before {
@@ -132,12 +133,56 @@
   margin-top: auto;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-meta {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-main);
+}
+
+.view-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.view-cert-btn:hover {
+  color: var(--primary);
+}
+
+.view-cert-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.view-cert-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+[data-theme='light'] .view-cert-btn {
+  color: var(--text-main);
+}
+
+[data-theme='light'] .view-cert-btn:hover {
+  color: var(--primary);
 }
 
 @media (max-width: 1200px) {

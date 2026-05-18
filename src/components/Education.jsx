@@ -25,7 +25,8 @@ const Education = () => {
       institution: 'Alison',
       period: '2024',
       description: 'Gained knowledge of C programming, including variables, loops, functions, and basic problem-solving.',
-      meta: 'Grade: Distinction'
+      meta: 'Grade: Distinction',
+      link: 'https://drive.google.com/file/d/1YMCMQL096BLe5EkoZlO_fwd7ppBqEwSw/view?usp=drive_link'
     },
     {
       type: 'Certificate',
@@ -33,7 +34,8 @@ const Education = () => {
       institution: 'Open University of Sri Lanka',
       period: '2023',
       description: 'Completed a course covering basic computer skills, software use, and digital literacy.',
-      meta: 'Certified'
+      meta: 'Certified',
+      link: 'https://drive.google.com/file/d/1eKj3UwXJV1YeNrqRTt6ZlXNduXS1UH37/view?usp=drive_link'
     }
   ];
 
@@ -75,6 +77,31 @@ const Education = () => {
               <p className="card-desc">{item.description}</p>
               <div className="card-footer">
                 <span className="card-meta">{item.meta}</span>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="view-cert-btn"
+                  >
+                    <span>View Certificate</span>
+                    <svg
+                      className="link-icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
