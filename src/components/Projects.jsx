@@ -3,11 +3,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Projects.css';
 import care4petsImg from '../assets/care4pets.png';
 import bookfairImg from '../assets/bookfair.jpeg';
+import jewelleryImg from '../assets/jewellery-ecommerce.png';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const projectList = [
+    {
+      title: 'Dewora Jewellers',
+      subtitle: 'MERN Stack E-commerce • 2026',
+      description: 'A full-featured jewellery e-commerce platform built with the MERN stack. Includes product management, user authentication, shopping cart, Stripe payment integration, admin dashboard, and a premium luxury-themed UI.',
+      tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Stripe'],
+      github: 'https://github.com/ThisariHewage/Mern_Jewellery_Ecommerce',
+      live: 'https://github.com/ThisariHewage/Mern_Jewellery_Ecommerce',
+      image: jewelleryImg
+    },
     {
       title: 'Care4Pets',
       subtitle: 'Pet Store E-commerce Platform',
