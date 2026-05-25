@@ -66,7 +66,12 @@ function App() {
                 <a href="#contact" className="action-btn text-btn">
                   GET IN TOUCH
                 </a>
-                <a href="/cv.pdf" className="action-btn text-btn with-icon">
+                <a
+                  href="https://drive.google.com/file/d/1xMcg7IymTLDuCoy3Zs3ZvU_GjPE57yFs/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="action-btn text-btn with-icon"
+                >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                   CV
                 </a>
@@ -174,6 +179,5 @@ function App() {
 }
 
 export default App;
-
 
 
