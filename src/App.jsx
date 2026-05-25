@@ -50,7 +50,7 @@ function App() {
 
               <motion.div variants={itemVariants} className="title-group-v2">
                 <div className="line-one">
-                  <h1 className="hero-name-top">Hi, I'm</h1>
+                  <h1 className="hero-name-top">Holle, I'm</h1>
                   <div className="title-divider-line"></div>
                 </div>
                 <h1 className="hero-name-bottom">Thisari Uresha Dewmini</h1>
@@ -58,6 +58,16 @@ function App() {
               <motion.p variants={itemVariants} className="subtitle-v2">
                 Software Engineering Undergraduate | Full Stack Developer
               </motion.p>
+
+              <motion.button
+                type="button"
+                variants={itemVariants}
+                className="scroll-indicator-mobile"
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <span>Scroll down</span>
+                <span className="scroll-icon">↓</span>
+              </motion.button>
 
               <motion.div variants={itemVariants} className="hero-actions">
                 <a href="https://github.com/ThisariHewage" className="action-btn icon-only">
@@ -145,8 +155,8 @@ function App() {
 
               <div className="about-stats-sidebar">
                 {[
-                  { num: '01+', label: 'Years Learning' },
-                  { num: '02+', label: 'Projects Built' },
+                  { num: '02+', label: 'Years Learning' },
+                  { num: '03+', label: 'Projects Built' },
                   { num: '05+', label: 'Tech Stacks' }
                 ].map((stat, i) => (
                   <motion.div
@@ -179,5 +189,4 @@ function App() {
 }
 
 export default App;
-
 

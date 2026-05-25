@@ -9,7 +9,7 @@ const Education = () => {
       institution: 'University of Kelaniya',
       period: '2023 - Present',
       description: 'Specializing in Net centric Web Application Development, Data Science and Engineering Application, Health Informatic Engineering Domains.',
-      meta: 'CGPA: 3.50/4.0'
+      meta: 'CGPA: 3.6222/4.0'
     },
     {
       type: 'Degree',

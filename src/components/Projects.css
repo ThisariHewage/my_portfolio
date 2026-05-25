@@ -188,6 +188,68 @@
   }
 }
 
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 5rem 0;
+  }
+
+  .projects-featured-list,
+  .projects-slider-container {
+    gap: 4rem;
+    margin-top: 3rem;
+    min-height: auto;
+  }
+
+  .featured-project {
+    gap: 2rem;
+  }
+
+  .project-title-featured {
+    font-size: 2.2rem;
+  }
+
+  .project-desc-featured {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .projects-bottom-nav {
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-visual {
+    border-radius: 6px;
+  }
+
+  .project-subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 1.2px;
+  }
+
+  .project-title-featured {
+    font-size: 1.8rem;
+  }
+
+  .project-tech-featured {
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .tech-badge-featured {
+    font-size: 0.82rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .slider-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .project-visual {

@@ -243,8 +243,38 @@
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
   .nav-brand {
     font-size: 1rem;
     letter-spacing: 1px;
+  }
+
+  .nav-avatar--visible {
+    margin-right: 0.5rem;
+  }
+
+  .mobile-nav-links {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+
+  .mobile-nav-links li a {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-brand {
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    max-width: 36px;
   }
 }

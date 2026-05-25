@@ -183,6 +183,47 @@
   }
 }
 
+@media (max-width: 480px) {
+  .blog-card {
+    padding: 1.2rem;
+  }
+
+  .blog-image-container {
+    margin-bottom: 1.6rem;
+  }
+
+  .blog-image-overlay {
+    padding: 1.8rem 0.8rem 0.8rem;
+  }
+
+  .blog-image-meta {
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+  }
+
+  .blog-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .blog-excerpt {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-tech-tag {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .read-more-link,
+  .blogs-more-link {
+    font-size: 0.76rem;
+    letter-spacing: 1px;
+  }
+}
+
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .blog-card {
   background-color: #f0f9ff;

@@ -191,6 +191,50 @@
   }
 }
 
+@media (max-width: 768px) {
+  .education-section {
+    padding: 5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .edu-cards-grid {
+    gap: 2rem;
+  }
+
+  .edu-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-card {
+    padding: 1.4rem;
+  }
+
+  .card-top,
+  .card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .card-type,
+  .view-cert-btn {
+    letter-spacing: 1px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-desc {
+    font-size: 0.95rem;
+  }
+}
+
 
 /* ===== Light Mode Overrides ===== */
 [data-theme='light'] .edu-card {
