@@ -50,7 +50,7 @@ function App() {
 
               <motion.div variants={itemVariants} className="title-group-v2">
                 <div className="line-one">
-                  <h1 className="hero-name-top">Holle, I'm</h1>
+                  <h1 className="hero-name-top">Hello, I'm</h1>
                   <div className="title-divider-line"></div>
                 </div>
                 <h1 className="hero-name-bottom">Thisari Uresha Dewmini</h1>
